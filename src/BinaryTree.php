@@ -2,6 +2,7 @@
 
 namespace Src;
 
+use Exception;
 use Src\TreeNode;
 
 class BinaryTree {
@@ -22,37 +23,47 @@ class BinaryTree {
     /**
      * Insert a new node into the tree.
      *
-     * @param mixed $value
+     * @param int|null $value
+     *
      * @return void
      */
-    public function insert(int $value) {
+    public function insert(?int $value) {
         $newNode = new TreeNode($value);
 
         if ($this->root === null) {
             $this->root = $newNode;
-        } else {
-            $this->insertNode($this->root, $newNode);
+            return;
         }
+
+        $this->insertNode($this->root, $newNode);
     }
 
     /**
-     * Insert a new node into the tree (helper function).
+     * Insert a new node into the tree (helper function)
+     * Recursively called until we hit the correct location/depth
+     * for the newNode.
      *
      * @param TreeNode $node
      * @param TreeNode $newNode
+     *
      * @return void
      */
-    private function insertNode($node, $newNode) {
+    private function insertNode(TreeNode $node, TreeNode $newNode) {
         if ($newNode->value < $node->value) {
             if ($node->left === null) {
                 $node->left = $newNode;
-            } else {
-                $this->insertNode($node->left, $newNode);
+                return;
             }
-        } elseif ($node->right === null) {
-            $node->right = $newNode;
-        } else {
-            $this->insertNode($node->right, $newNode);
+
+            $this->insertNode($node->left, $newNode);
+            return;
         }
+
+        if ($node->right === null) {
+            $node->right = $newNode;
+            return;
+        }
+
+        $this->insertNode($node->right, $newNode);
     }
 }

@@ -1,12 +1,12 @@
 <?php
 
-namespace Tests;
+namespace Tests\Unit;
 
 use Src\TreeNode;
 
 use PHPUnit\Framework\TestCase;
 
-class TreeNodeTest extends TestCase {
+class TreeNodeUnitTest extends TestCase {
     public function testTreeNodeCreation() {
         $value = 10;
         $node = new TreeNode($value);
