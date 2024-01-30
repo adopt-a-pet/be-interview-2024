@@ -28,6 +28,10 @@ class BinaryTree {
      * @return void
      */
     public function insert(?int $value) {
+        if ($value === null) {
+            throw new Exception("Value cannot be null.");
+        }
+
         $newNode = new TreeNode($value);
 
         if ($this->root === null) {

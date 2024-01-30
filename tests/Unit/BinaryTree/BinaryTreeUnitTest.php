@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit;
+namespace Tests\Unit\BinaryTree;
 
 use PHPUnit\Framework\TestCase;
 use Src\BinaryTree;
@@ -22,7 +22,12 @@ class BinaryTreeUnitTest extends TestCase {
         $this->tree = new BinaryTree();
     }
 
-    public function testInsertNull() {
+    /**
+     * Test the insert method with null value.
+     *
+     * @return void
+     */
+    public function testInsertNull(): void {
         $this->expectException(\Exception::class);
 
         $this->expectExceptionMessage("Value cannot be null.");
@@ -37,7 +42,7 @@ class BinaryTreeUnitTest extends TestCase {
      *
      * @return void
      */
-    public function testInsert() {
+    public function testInsert(): void {
         $this->assertNull($this->tree->root);
 
         $values = [15, 10, 20, 8, 12, 17, 25];

@@ -1,13 +1,19 @@
 <?php
 
-namespace Tests\Unit;
+namespace Tests\Unit\BinaryTree;
 
 use Src\TreeNode;
 
 use PHPUnit\Framework\TestCase;
 
 class TreeNodeUnitTest extends TestCase {
-    public function testTreeNodeCreation() {
+
+    /**
+     * Test the creation of a tree node.
+     *
+     * @return void
+     */
+    public function testTreeNodeCreation(): void {
         $value = 10;
         $node = new TreeNode($value);
 
