@@ -29,21 +29,14 @@ class DogUnitTest extends TestCase
      *
      * @return void
      */
-    public function testInheritance(): void
+    public function testInheritance()
     {
-        $this->assertInstanceOf('Src\Pet', $this->dog);
+        // Please write a test that checks for proper inheritance.
     }
 
-    /**
-     * Test the creation of a dog.
-     *
-     * @return void
-     */
-    public function testDogCreation(): void
+    public function testGetAge()
     {
-        $this->assertEquals('Fido', $this->dog->getName());
-        $this->assertEquals(5, $this->dog->getAge());
-        $this->assertEquals('dog', $this->dog->getType());
+        // Please write a test that checks that the age of the dog is returned as an integer.
     }
 
     /**
@@ -54,5 +47,20 @@ class DogUnitTest extends TestCase
     public function testGetBreed(): void
     {
         $this->assertEquals('Labrador', $this->dog->getBreed());
+    }
+
+    public function testGetName()
+    {
+        // Please write a test that checks that the name of the dog is returned as a string.
+    }
+
+    /**
+     * Test the getAgeInHumanYears method.
+     *
+     * @return void
+     */
+    public function testGetAgeInHumanYears(): void
+    {
+        $this->assertEquals(35, $this->dog->getAgeInHumanYears());
     }
 }

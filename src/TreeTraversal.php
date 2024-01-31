@@ -30,6 +30,7 @@ class TreeTraversal
      * @return int
      */
     public function getTreeDepth(): int {
+        // If the tree is empty, the depth is 0.
         if ($this->tree->root === null) {
             return 0;
         }
@@ -45,13 +46,6 @@ class TreeTraversal
      * @return int
      */
     private function getDepth(?TreeNode $node): int {
-        if ($node === null) {
-            return 0;
-        }
-
-        $leftDepth = $this->getDepth($node->left);
-        $rightDepth = $this->getDepth($node->right);
-
-        return max($leftDepth, $rightDepth) + 1;
+        // Please implement this method.
     }
 }

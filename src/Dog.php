@@ -5,7 +5,7 @@ namespace Src;
 use Src\Pet;
 use Src\PetInterface;
 
-class Dog extends Pet implements PetInterface
+class Dog
 {
     /**
      * The breed of the dog.
@@ -24,7 +24,6 @@ class Dog extends Pet implements PetInterface
     public function __construct(string $name, int $age, string $breed)
     {
         parent::__construct($name, $age, 'dog');
-        $this->breed = $breed;
     }
 
     /**
@@ -35,5 +34,10 @@ class Dog extends Pet implements PetInterface
     public function getBreed(): string
     {
         return $this->breed;
+    }
+
+    public function getAgeInHumanYears()
+    {
+        // return the age in human years as an integer
     }
 }

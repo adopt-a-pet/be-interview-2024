@@ -2,7 +2,7 @@
 
 namespace Src;
 
-abstract class Pet {
+abstract class Pet implements PetInterface {
     /**
      * The name of the pet.
      *
