@@ -12,7 +12,7 @@
 
 * Please implement any incomplete or missing test methods in the tests\Unit\Pet\DogUnitTest class.
 
-## Prompot 2 - Binary Tree:
+## Prompt 2 - Binary Tree:
 
 * Implement the getDepth method within the TreeTraversal class.
 
