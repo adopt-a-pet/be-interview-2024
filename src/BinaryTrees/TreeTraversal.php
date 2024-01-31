@@ -2,7 +2,7 @@
 
 namespace Src\BinaryTrees;
 
-use Src\TreeNode;
+use Src\BinaryTrees\TreeNode;
 use Src\BinaryTrees\BinaryTree;
 
 class TreeTraversal

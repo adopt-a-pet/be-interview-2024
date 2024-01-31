@@ -3,7 +3,6 @@
 namespace Src\Pet;
 
 use Src\Pet\Pet;
-use Src\Pet\PetInterface;
 
 class Dog
 {

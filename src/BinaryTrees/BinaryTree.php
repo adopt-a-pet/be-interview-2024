@@ -3,7 +3,7 @@
 namespace Src\BinaryTrees;
 
 use Exception;
-use Src\TreeNode;
+use Src\BinaryTrees\TreeNode;
 
 class BinaryTree {
     /**
