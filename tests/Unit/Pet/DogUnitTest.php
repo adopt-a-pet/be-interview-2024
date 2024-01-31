@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Pet;
 
-use Src\Dog;
+use Src\Pet\Dog;
 use PHPUnit\Framework\TestCase;
 
 class DogUnitTest extends TestCase

@@ -1,9 +1,9 @@
 <?php
 
-namespace Src;
+namespace Src\BinaryTrees;
 
 use Src\TreeNode;
-use Src\BinaryTree;
+use Src\BinaryTrees\BinaryTree;
 
 class TreeTraversal
 {

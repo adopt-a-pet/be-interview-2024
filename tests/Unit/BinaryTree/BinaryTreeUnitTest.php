@@ -3,7 +3,7 @@
 namespace Tests\Unit\BinaryTree;
 
 use PHPUnit\Framework\TestCase;
-use Src\BinaryTree;
+use Src\BinaryTrees\BinaryTree;
 
 class BinaryTreeUnitTest extends TestCase {
     /**

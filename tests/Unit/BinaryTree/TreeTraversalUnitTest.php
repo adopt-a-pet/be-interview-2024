@@ -2,8 +2,8 @@
 
 namespace Tests\Unit\BinaryTree;
 
-use Src\BinaryTree;
-use Src\TreeTraversal;
+use Src\BinaryTrees\BinaryTree;
+use Src\BinaryTrees\TreeTraversal;
 use PHPUnit\Framework\TestCase;
 
 class TreeTraversalUnitTest extends TestCase {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Src;
+namespace Src\Pet;
 
-use Src\Pet;
-use Src\PetInterface;
+use Src\Pet\Pet;
+use Src\Pet\PetInterface;
 
 class Dog
 {

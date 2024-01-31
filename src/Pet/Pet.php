@@ -1,6 +1,6 @@
 <?php
 
-namespace Src;
+namespace Src\Pet;
 
 abstract class Pet implements PetInterface {
     /**

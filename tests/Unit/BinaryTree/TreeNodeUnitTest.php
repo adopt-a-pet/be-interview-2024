@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\BinaryTree;
 
-use Src\TreeNode;
+use Src\BinaryTrees\TreeNode;
 
 use PHPUnit\Framework\TestCase;
 
