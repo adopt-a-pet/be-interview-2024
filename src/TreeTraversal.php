@@ -24,14 +24,26 @@ class TreeTraversal
         $this->tree = $tree;
     }
 
-    public function getTreeDepth(BinaryTree $tree): int {
-        if ($tree->root === null) {
+    /**
+     * Get the tree depth
+     *
+     * @return int
+     */
+    public function getTreeDepth(): int {
+        if ($this->tree->root === null) {
             return 0;
         }
 
-        return $this->getDepth($tree->root);
+        return $this->getDepth($this->tree->root);
     }
 
+    /**
+     * Get the depth of the tree.
+     *
+     * @param TreeNode|null $node
+     *
+     * @return int
+     */
     private function getDepth(?TreeNode $node): int {
         if ($node === null) {
             return 0;

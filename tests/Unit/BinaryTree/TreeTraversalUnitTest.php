@@ -16,12 +16,20 @@ class TreeTraversalUnitTest extends TestCase {
     private TreeTraversal $treeTraversal;
 
     /**
+     * The binary tree instance for testing.
+     *
+     * @var BinaryTree
+     */
+    private BinaryTree $tree;
+
+    /**
      * Set up before tests.
      *
      * @return void
      */
     protected function setUp(): void {
-        $this->treeTraversal = new TreeTraversal();
+        $this->tree = new BinaryTree();
+        $this->treeTraversal = new TreeTraversal($this->tree);
     }
 
     /**
@@ -30,17 +38,16 @@ class TreeTraversalUnitTest extends TestCase {
      * @return void
      */
     public function testGetTreeDepth(): void {
-        $this->assertEquals(0, $this->treeTraversal->getTreeDepth(new BinaryTree()));
+        $this->assertEquals(0, $this->treeTraversal->getTreeDepth());
 
-        $tree = new BinaryTree();
-        $tree->insert(15);
-        $tree->insert(10);
-        $tree->insert(20);
-        $tree->insert(8);
-        $tree->insert(12);
-        $tree->insert(17);
-        $tree->insert(25);
+        $this->tree->insert(15);
+        $this->tree->insert(10);
+        $this->tree->insert(20);
+        $this->tree->insert(8);
+        $this->tree->insert(12);
+        $this->tree->insert(17);
+        $this->tree->insert(25);
 
-        $this->assertEquals(3, $this->treeTraversal->getTreeDepth($tree));
+        $this->assertEquals(3, $this->treeTraversal->getTreeDepth($this->tree));
     }
 }
